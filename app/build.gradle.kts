@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.ets.projet2025.agence_touristique"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.ets.projet2025.agence_touristique"
