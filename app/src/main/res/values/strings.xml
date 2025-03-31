@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Agence touristique</string>
+    <string name="title_activity_enregistrer">Enregistrer</string>
 </resources>
