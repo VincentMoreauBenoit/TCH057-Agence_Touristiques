@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <!-- Image en-tête (ex. 200dp de hauteur) -->
+
+    <!-- Conteneur blanc pour le formulaire d'inscription, centré dans l'espace restant -->
+
+    <ImageView
+        android:id="@+id/imgBackgroundTop"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/containerInscription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgBackgroundTop"
+        app:layout_constraintVertical_bias="0.0">
+
+        <!-- Titre "Inscription" -->
+
+        <!-- Champ Prénom -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp">
+            <!-- Sous-titre "Créer votre compte" -->
+
+            <!-- Image décorative (feuille) -->
+
+            <!-- Champ Nom -->
+
+            <TextView
+                android:id="@+id/tvInscription"
+                android:layout_width="301dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Inscription"
+                android:textAlignment="center"
+                android:textColor="#3579C2"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvCreerCompte"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCreerCompte"
+                android:layout_width="301dp"
+                android:layout_height="30dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Créer votre compte"
+                android:textAlignment="center"
+                android:textColor="#6E6E6E"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInscription" />
+
+            <ImageView
+                android:id="@+id/imgFeuille"
+                android:layout_width="320dp"
+                android:layout_height="184dp"
+                android:layout_marginEnd="-63dp"
+                android:layout_marginBottom="-30dp"
+                android:src="@drawable/feuille_deco"
+                android:translationX="120px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textNomInscription"
+                android:layout_width="173dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="24sp"
+                android:layout_marginRight="6sp"
+                android:layout_marginBottom="15sp"
+                android:background="@drawable/edittext_rounded_bg"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:hint="@string/nom"
+                android:paddingLeft="18sp"
+                android:paddingRight="18sp"
+                android:textColor="#205187"
+                android:textColorHint="#205187"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/textPrenomInscription"
+                android:layout_width="176dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="6sp"
+                android:layout_marginRight="24sp"
+                android:background="@drawable/edittext_rounded_bg"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:hint="@string/prenom"
+                android:paddingLeft="18sp"
+                android:paddingRight="18sp"
+                android:textColor="#205187"
+                android:textColorHint="#205187"
+                android:textSize="16sp"
+                tools:layout_marginBottom="15sp" />
+
+        </LinearLayout>
+        <!-- Deux champs sur la même ligne : Âge & Téléphone -->
+
+        <!-- Champ Courriel -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="15sp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textAgeInscription"
+                android:layout_width="77dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="24sp"
+                android:layout_marginBottom="15sp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_rounded_bg"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:hint="@string/age"
+                android:textAlignment="center"
+                android:textColor="#205187"
+                android:textColorHint="#205187"
+                android:textSize="16sp" />
+
+            <!-- Espacement horizontal -->
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/textTelephoneInscription"
+                android:layout_width="216dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="16sp"
+                android:layout_marginRight="24sp"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:background="@drawable/edittext_rounded_bg"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:hint="Téléphone"
+                android:paddingLeft="18sp"
+                android:paddingRight="18sp"
+                android:textColor="#205187"
+                android:textColorHint="#205187"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/textCourielInscription"
+            android:layout_width="match_parent"
+            android:layout_height="58sp"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:layout_marginBottom="15sp"
+            android:background="@drawable/edittext_rounded_bg"
+            android:fontFamily="@font/inknut_antiqua_light"
+            android:hint="Courriel"
+            android:paddingLeft="18sp"
+            android:paddingRight="18sp"
+            android:textColor="#205187"
+            android:textColorHint="#205187"
+            android:textSize="16sp" />
+
+        <!-- Bouton S'inscrire -->
+
+        <!-- Lien "Vous avez déjà un compte ? Se connecter" -->
+
+        <EditText
+            android:id="@+id/textAdresseInscription"
+            android:layout_width="match_parent"
+            android:layout_height="58sp"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:layout_marginBottom="15sp"
+            android:background="@drawable/edittext_rounded_bg"
+            android:fontFamily="@font/inknut_antiqua_light"
+            android:hint="Adresse"
+            android:paddingLeft="18sp"
+            android:paddingRight="18sp"
+            android:textColor="#205187"
+            android:textColorHint="#205187"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/textMDPInscription"
+            android:layout_width="match_parent"
+            android:layout_height="58sp"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:layout_marginBottom="15sp"
+            android:background="@drawable/edittext_rounded_bg"
+            android:fontFamily="@font/inknut_antiqua_light"
+            android:hint="Mot de passe"
+            android:paddingLeft="18sp"
+            android:paddingRight="18sp"
+            android:textColor="#205187"
+            android:textColorHint="#205187"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnInscrire"
+            android:layout_width="match_parent"
+            android:layout_height="62sp"
+            android:layout_marginLeft="24sp"
+            android:layout_marginRight="24sp"
+            android:layout_marginBottom="2sp"
+            android:backgroundTint="#3F76B5"
+            android:fontFamily="@font/inknut_antiqua_light"
+            android:padding="0sp"
+            android:text="@string/s_inscrire"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvInscrire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16sp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Vous avez déjà un compte ?"
+                android:textColor="@android:color/black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvInscrire2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="16sp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Se connecter"
+                android:textColor="#137BEB"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="385dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
