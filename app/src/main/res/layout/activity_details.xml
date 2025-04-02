@@ -1,152 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutDestinationDetails"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="20sp"
     tools:context=".DetailsActivity">
 
     <!-- Image de la destination en haut -->
-    <ImageView
-        android:id="@+id/imgDestination"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg_home"
-    app:layout_constraintTop_toTopOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Contenu défilable avec les informations et la description -->
-    <ScrollView
-        android:id="@+id/scrollContent"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/imgDestination"
-        app:layout_constraintBottom_toTopOf="@+id/buttonContainer"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:padding="16dp">
 
-        <LinearLayout
+    <!-- Conteneur pour les deux boutons en bas -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="24dp">
+
+        <!-- Section Informations -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="wrap_content">
 
-            <!-- Section Informations -->
-            <TextView
-                android:id="@+id/tvSectionHeader"
+            <ImageView
+                android:id="@+id/imageDestination"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/alike_angular"
-                android:paddingBottom="8dp"
-                android:text="INFORMATIONS"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                android:layout_height="337dp"
+                android:padding="0sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/edittext_rounded_bg2" />
+
+            <Button
+                android:id="@+id/btnRetourImage"
+                android:layout_width="50dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#BABABA"
+                android:padding="0sp"
+                android:text="<"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:cornerRadius="10sp"
+                app:layout_constraintStart_toStartOf="@+id/imageDestination"
+                app:layout_constraintTop_toTopOf="@+id/imageDestination" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:layout_marginBottom="5sp">
 
             <TextView
-                android:id="@+id/tvDestination"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Destination : Paris"
-                android:textSize="16sp"
-                android:layout_marginBottom="4dp"/>
+                android:id="@+id/txtDestination"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:text="Destination : "
+                android:textAlignment="gravity"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:fontFamily="@font/inknut_antiqua_light" />
 
             <TextView
-                android:id="@+id/tvDuree"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Durée : 7 jours"
-                android:textSize="16sp"
-                android:layout_marginBottom="4dp"/>
+                android:id="@+id/txtDuree"
+                android:layout_width="352dp"
+                android:layout_height="36dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Durée : "
+                android:textAlignment="viewStart"
+                android:textAllCaps="false"
+                android:textColor="#7CA3CD"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="serif"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDestination"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/inknut_antiqua_light"
+            android:hint="DESCRIPTION"
+            android:text="La France, pays de l'Europe occidentale, compte des villes médiévales, des villages alpins et des plages. Paris, sa capitale, est célèbre pour ses maisons de mode, ses musées d'art classique, dont celui du Louvre, et ses monuments comme la Tour Eiffel. "
+            android:textAlignment="viewStart"
+            android:textColor="#353535"
+            android:textColorHint="#353535"
+            android:textSize="12sp"
+            tools:ignore="TextSizeCheck" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_marginBottom="30sp">
 
             <TextView
                 android:id="@+id/tvDate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Date : 01/05/2025"
+                android:layout_width="89dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Date "
                 android:textSize="16sp"
-                android:layout_marginBottom="4dp"/>
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvPlaceDisponible"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Places disponibles : 12"
+                android:id="@+id/txtPlaceDisponible"
+                android:layout_width="209dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="22dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Places disponibles : 120"
                 android:textSize="16sp"
-                android:layout_marginBottom="4dp"/>
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSelectDate"
+                android:layout_width="350dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="19dp"
+                android:background="@drawable/edittext_border"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:hint="Sélectionner une date"
+                android:padding="0dp"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
 
             <TextView
                 android:id="@+id/tvPrix"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Prix : 975 $"
+                android:layout_width="89dp"
+                android:layout_height="40dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="Prix "
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
-
-            <!-- Section Description -->
-            <TextView
-                android:id="@+id/tvDescriptionHeader"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/alike_angular"
-                android:paddingBottom="8dp"
-                android:text="DESCRIPTION"
-                android:textSize="18sp"
-                android:textStyle="bold" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvDescription"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description détaillée de la destination..."
-                android:textSize="16sp"
-                android:layout_marginBottom="16dp"/>
-        </LinearLayout>
-    </ScrollView>
+                android:id="@+id/textPrix"
+                android:layout_width="95dp"
+                android:layout_height="53dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="975$"
+                android:textColor="#26CC2C"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Conteneur pour les deux boutons en bas -->
-    <LinearLayout
-        android:id="@+id/buttonContainer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_margin="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+            <Button
+                android:id="@+id/btnReserver"
+                android:layout_width="259dp"
+                android:layout_height="75dp"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#1E7AED"
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:padding="0sp"
+                android:text="Réserver maintenant ->"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:cornerRadius="15sp"
+                app:layout_constraintStart_toEndOf="@+id/textPrix"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:textSize="18sp" />
 
-        <!-- Bouton Retour -->
-        <Button
-            android:id="@+id/btnRetour"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#6A76B5"
-            android:fontFamily="@font/alike_angular"
-            android:text="Retour"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <!-- Espacement entre les boutons -->
-        <Space
-            android:layout_width="16dp"
-            android:layout_height="wrap_content"/>
+        <!-- Section Description -->
 
-        <!-- Bouton Réserver maintenant -->
-        <Button
-            android:id="@+id/btnReserver"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:backgroundTint="#6A76B5"
-            android:fontFamily="@font/alike_angular"
-            android:text="Réserver maintenant"
-            android:textAllCaps="false"
-            android:textColor="@android:color/white" />
     </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="351dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
