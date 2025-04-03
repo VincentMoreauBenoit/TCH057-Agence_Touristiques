@@ -118,11 +118,12 @@
             android:background="@drawable/edittext_rounded_bg"
             android:fontFamily="@font/inknut_antiqua_light"
             android:hint="Mot de passe"
+            android:inputType="textPassword"
             android:paddingLeft="18sp"
             android:paddingRight="18sp"
             android:textColor="#205187"
             android:textColorHint="#205187"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnConnexion"

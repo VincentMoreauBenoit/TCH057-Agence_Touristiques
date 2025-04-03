@@ -136,22 +136,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/txtSelectDate"
-                android:layout_width="350dp"
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="353dp"
                 android:layout_height="52dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="1dp"
                 android:background="@drawable/edittext_border"
-                android:fontFamily="@font/inknut_antiqua_light"
-                android:hint="Sélectionner une date"
-                android:padding="0dp"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
