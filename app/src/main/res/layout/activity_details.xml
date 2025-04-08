@@ -31,22 +31,22 @@
 
             <ImageView
                 android:id="@+id/imageDestination"
-                android:layout_width="match_parent"
-                android:layout_height="337dp"
+                android:layout_width="374dp"
+                android:layout_height="292dp"
                 android:padding="0sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/edittext_rounded_bg2" />
 
             <Button
-                android:id="@+id/btnRetourImage"
+                android:id="@+id/btnRetour"
                 android:layout_width="50dp"
                 android:layout_height="55dp"
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#BABABA"
                 android:padding="0sp"
-                android:text="<"
+                android:text="X"
                 android:textSize="32sp"
                 android:textStyle="bold"
                 app:cornerRadius="10sp"
@@ -64,7 +64,7 @@
             android:layout_marginBottom="5sp">
 
             <TextView
-                android:id="@+id/txtDestination"
+                android:id="@+id/textDetailDestination"
                 android:layout_width="352dp"
                 android:layout_height="36dp"
                 android:text="Destination : "
@@ -76,7 +76,7 @@
                 tools:fontFamily="@font/inknut_antiqua_light" />
 
             <TextView
-                android:id="@+id/txtDuree"
+                android:id="@+id/textDetailDuree"
                 android:layout_width="352dp"
                 android:layout_height="36dp"
                 android:fontFamily="@font/inknut_antiqua_light"
@@ -89,13 +89,13 @@
                 android:typeface="serif"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtDestination"
+                app:layout_constraintTop_toBottomOf="@+id/textDetailDestination"
                 app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/txtDescription"
+            android:id="@+id/textDetailDescription"
             android:layout_width="351dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
@@ -125,7 +125,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/txtPlaceDisponible"
+                android:id="@+id/textPlaceDisponible"
                 android:layout_width="209dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="22dp"
@@ -137,7 +137,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
-                android:id="@+id/spinner"
+                android:id="@+id/spSejour"
                 android:layout_width="353dp"
                 android:layout_height="52dp"
                 android:layout_marginBottom="1dp"
@@ -164,7 +164,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textPrix"
+                android:id="@+id/textDetailPrix"
                 android:layout_width="95dp"
                 android:layout_height="53dp"
                 android:layout_marginBottom="12dp"
@@ -189,7 +189,7 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 app:cornerRadius="15sp"
-                app:layout_constraintStart_toEndOf="@+id/textPrix"
+                app:layout_constraintStart_toEndOf="@+id/textDetailPrix"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:textSize="18sp" />
 

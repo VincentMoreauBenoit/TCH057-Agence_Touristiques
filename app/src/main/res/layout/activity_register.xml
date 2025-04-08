@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    android:background="@android:color/white"
+    tools:context=".activite.LoginActivity">
 
     <!-- Image en-tête (ex. 200dp de hauteur) -->
 
@@ -25,7 +26,7 @@
     <LinearLayout
         android:id="@+id/containerInscription"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:background="@android:color/white"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +105,7 @@
                 android:layout_marginBottom="15sp"
                 android:background="@drawable/edittext_rounded_bg"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:hint="@string/nom"
+                android:hint="Nom"
                 android:paddingLeft="18sp"
                 android:paddingRight="18sp"
                 android:textColor="#205187"
@@ -119,7 +120,7 @@
                 android:layout_marginRight="24sp"
                 android:background="@drawable/edittext_rounded_bg"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:hint="@string/prenom"
+                android:hint="Prenom"
                 android:paddingLeft="18sp"
                 android:paddingRight="18sp"
                 android:textColor="#205187"
@@ -146,8 +147,8 @@
                 android:layout_weight="1"
                 android:background="@drawable/edittext_rounded_bg"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:hint="@string/age"
-                android:textAlignment="center"
+                android:hint="Age"
+                android:paddingLeft="18sp"
                 android:textColor="#205187"
                 android:textColorHint="#205187"
                 android:textSize="16sp" />

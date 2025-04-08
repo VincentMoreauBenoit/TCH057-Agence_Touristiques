@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activite.MainActivity">
 
     <!-- Image de fond -->
 
     <!-- Titre principal -->
 
+    <!-- Champ Destination -->
     <ImageView
         android:id="@+id/imgBackground"
         android:layout_width="0dp"
@@ -19,27 +21,33 @@
         android:src="@drawable/bg_home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/overlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.15"
-        android:background="@color/white"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+    <Button
+        android:id="@+id/btnMainRetour"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#BABABA"
+        android:padding="0sp"
+        android:text="X"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:cornerRadius="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvTitre"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginTop="250sp"
-        android:fontFamily="@font/inknut_antiqua_light"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/alike_angular"
         android:gravity="center"
         android:text="Explorez et réservez \nla destination de vos rêves !"
         android:textAlignment="center"
@@ -50,174 +58,148 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Champ Destination -->
     <EditText
-        android:id="@+id/etDestination"
-        android:layout_width="341dp"
-        android:layout_height="58dp"
+        android:id="@+id/textbugdetMin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:alpha="0.9"
+        android:layout_marginTop="8dp"
         android:background="@drawable/edittext_rounded_bg"
-        android:fontFamily="@font/inknut_antiqua_light"
+        android:fontFamily="@font/alike_angular"
+        android:hint="Budget MIN"
+        android:padding="12dp"
+        android:textColorHint="#FF222222"
+        app:layout_constraintEnd_toStartOf="@+id/textBudgetMax"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDestination" />
+
+    <EditText
+        android:id="@+id/textBudgetMax"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:fontFamily="@font/alike_angular"
+        android:hint="Budget MAX"
+        android:padding="12dp"
+        android:textColorHint="#FF222222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/textbugdetMin"
+        app:layout_constraintTop_toBottomOf="@+id/textDestination" />
+
+    <Spinner
+        android:id="@+id/spSejour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@+id/textDateDepart"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textbugdetMin" />
+
+    <EditText
+        android:id="@+id/textDateDepart"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:fontFamily="@font/alike_angular"
+        android:hint="Date départ"
+        android:padding="12dp"
+        android:textColorHint="#FF222222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/spSejour"
+        app:layout_constraintTop_toBottomOf="@+id/textBudgetMax" />
+
+    <Button
+        android:id="@+id/btnHistorique"
+        android:layout_width="142dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#417CBA"
+        android:fontFamily="@font/alike_angular"
+        android:text="Historique"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSejour"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRechercher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#417CBA"
+        android:fontFamily="@font/alike_angular"
+        android:text="Rechercher"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spSejour"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/textDestination"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:fontFamily="@font/alike_angular"
         android:hint="Destination"
-        android:paddingLeft="18sp"
-        android:textColorHint="#0D2E52"
-        android:textSize="16sp"
+        android:padding="12dp"
+        android:textColorHint="#FF222222"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitre" />
 
     <!-- Champ Budget MIN -->
 
+    <!-- Champ Budget MAX -->
+
     <!-- Spinner pour le Type de voyage -->
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="36dp"
-        android:background="@drawable/edittext_rounded_bg"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etDestination">
-
-        <!-- Champ Budget MIN -->
-        <EditText
-            android:id="@+id/etBudgetMin"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/inknut_antiqua_light"
-            android:hint="Budget MIN"
-            android:textAlignment="center"
-            android:textColorHint="#0D2E52"
-            android:textSize="16sp" />
-
-        <!-- Champ Budget MAX -->
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="1sp"
-            android:layout_height="match_parent"
-            android:background="#4B5E89" />
-
-        <EditText
-            android:id="@+id/etBudgetMax"
-            android:layout_width="wrap_content"
-            android:layout_height="58dp"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:fontFamily="@font/inknut_antiqua_light"
-            android:hint="Budget MAX"
-            android:textAlignment="center"
-            android:textColorHint="#0D2E52"
-            android:textSize="16sp" />
-    </LinearLayout>
 
     <!-- Champ pour la Date de départ -->
 
-    <Spinner
-        android:id="@+id/spTypeVoyage"
-        android:layout_width="162dp"
-        android:layout_height="58dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/edittext_rounded_bg"
-        android:minHeight="48dp"
-        android:padding="12dp"
-        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:spinnerMode="dropdown"
-        app:layout_constraintEnd_toStartOf="@+id/etDateDepart"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <EditText
-        android:id="@+id/etDateDepart"
-        android:layout_width="161dp"
-        android:layout_height="58dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/edittext_rounded_bg"
-        android:fontFamily="@font/inknut_antiqua_light"
-        android:hint="Date départ"
-        android:textAlignment="center"
-        android:textColorHint="#0D2E52"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@+id/spTypeVoyage"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-    <Button
-        android:id="@+id/btnRecherche"
-        android:layout_width="342dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="60dp"
-        android:backgroundTint="#3F76B5"
-        android:fontFamily="@font/inknut_antiqua_light"
-        android:padding="0sp"
-        android:text="Rechercher"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spTypeVoyage"
-        app:layout_constraintVertical_bias="0.534" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.08" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="62dp"
-        android:layout_height="62dp"
-        android:layout_margin="0sp"
-        android:layout_marginBottom="52dp"
-        android:background="@drawable/edittext_rounded_bg"
-        android:padding="14sp"
-        app:layout_constraintBottom_toTopOf="@id/tvTitre"
-        app:layout_constraintEnd_toEndOf="@+id/imgBackground"
-        app:layout_constraintHorizontal_bias="0.923"
-        app:layout_constraintStart_toStartOf="@+id/imgBackground"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.205"
-        app:srcCompat="@drawable/historique" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="62sp"
-        android:layout_height="62sp"
-        android:layout_marginEnd="317dp"
-        android:layout_marginBottom="148dp"
-        android:background="@drawable/edittext_rounded_bg"
-        android:padding="14sp"
-        app:layout_constraintBottom_toTopOf="@id/tvTitre"
-        app:layout_constraintEnd_toEndOf="@+id/overlay"
-        app:srcCompat="@drawable/log_out" />
-
     <!-- Bouton Rechercher -->
+
+
+    <ListView
+        android:id="@+id/lvVoyages"
+        android:layout_width="420dp"
+        android:layout_height="390dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/edittext_rounded_bg"
+        android:dividerHeight="1dp"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHistorique" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
