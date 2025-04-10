@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -7,15 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
         android:background="@drawable/edittext_rounded_bg2"
         android:orientation="horizontal"
-        android:padding="8dp">
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Image / icône dans l’item -->
         <ImageView
             android:id="@+id/imgHistoriqueVoyage"
-            android:layout_width="96dp"
-            android:layout_height="64dp"
+            android:layout_width="99dp"
+            android:layout_height="104dp"
             android:contentDescription="@string/historique_image"
             android:src="@drawable/ic_placeholder" />
 
@@ -30,20 +35,26 @@
                 android:id="@+id/textHistoriqueDestination"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Destination : " />
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="@string/destination_info"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/textHistoriqueMontant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Résumer : " />
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="@string/resumer"
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/textHistoriqueDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12sp"
-                android:text="Prix : " />
+                android:fontFamily="@font/inknut_antiqua_light"
+                android:text="@string/prix_info"
+                android:textSize="12sp" />
 
         </LinearLayout>
     </LinearLayout>

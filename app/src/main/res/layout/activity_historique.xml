@@ -38,11 +38,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
+            android:fontFamily="@font/inknut_antiqua_light"
             android:gravity="center"
-            android:text="HISTORIQUE DE RÉSERVATION"
+            android:text="@string/historique_de_r_servation"
+            android:textColor="#0053AE"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/black"/>
+            android:textStyle="bold" />
 
         <!-- ListView personnalisée -->
         <ListView
@@ -58,16 +59,18 @@
     <!-- Bouton MODIFIER en bas -->
     <Button
         android:id="@+id/btnHistoriqueRetour"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="380dp"
+        android:layout_height="57dp"
         android:layout_margin="16dp"
-        android:backgroundTint="#6A76B5"
-        android:text="Retour"
+        android:backgroundTint="#417CBA"
+        android:padding="0dp"
+        android:text="@string/retour_btn"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:textSize="16sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:fontFamily="@font/inknut_antiqua_light" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

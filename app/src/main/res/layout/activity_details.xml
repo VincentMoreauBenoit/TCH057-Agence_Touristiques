@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:padding="20sp"
-    tools:context=".DetailsActivity">
+    tools:context=".activite.DetailsActivity">
 
     <!-- Image de la destination en haut -->
 
@@ -45,9 +45,10 @@
                 android:layout_marginStart="28dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#BABABA"
+                android:fontFamily="@font/inknut_antiqua_light"
                 android:padding="0sp"
-                android:text="X"
-                android:textSize="32sp"
+                android:text="@string/x"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 app:cornerRadius="10sp"
                 app:layout_constraintStart_toStartOf="@+id/imageDestination"
@@ -67,7 +68,7 @@
                 android:id="@+id/textDetailDestination"
                 android:layout_width="352dp"
                 android:layout_height="36dp"
-                android:text="Destination : "
+                android:text="@string/destination"
                 android:textAlignment="gravity"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -80,7 +81,7 @@
                 android:layout_width="352dp"
                 android:layout_height="36dp"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:text="Durée : "
+                android:text="@string/dur_e"
                 android:textAlignment="viewStart"
                 android:textAllCaps="false"
                 android:textColor="#7CA3CD"
@@ -90,7 +91,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textDetailDestination"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="TextSizeCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -100,8 +102,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/inknut_antiqua_light"
-            android:hint="DESCRIPTION"
-            android:text="La France, pays de l'Europe occidentale, compte des villes médiévales, des villages alpins et des plages. Paris, sa capitale, est célèbre pour ses maisons de mode, ses musées d'art classique, dont celui du Louvre, et ses monuments comme la Tour Eiffel. "
+            android:hint="@string/description"
+            android:text="@string/la_france_pays_de_l_europe_occidentale_compte_des_villes_m_di_vales_des_villages_alpins_et_des_plages_paris_sa_capitale_est_c_l_bre_pour_ses_maisons_de_mode_ses_mus_es_d_art_classique_dont_celui_du_louvre_et_ses_monuments_comme_la_tour_eiffel"
             android:textAlignment="viewStart"
             android:textColor="#353535"
             android:textColorHint="#353535"
@@ -118,7 +120,7 @@
                 android:layout_width="89dp"
                 android:layout_height="40dp"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:text="Date "
+                android:text="@string/dateText"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -130,11 +132,12 @@
                 android:layout_height="40dp"
                 android:layout_marginEnd="22dp"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:text="Places disponibles : 120"
+                android:text="@string/places_disponibles_120"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextSizeCheck" />
 
             <Spinner
                 android:id="@+id/spSejour"
@@ -157,7 +160,7 @@
                 android:layout_width="89dp"
                 android:layout_height="40dp"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:text="Prix "
+                android:text="@string/prix"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -169,7 +172,7 @@
                 android:layout_height="53dp"
                 android:layout_marginBottom="12dp"
                 android:fontFamily="@font/inknut_antiqua_light"
-                android:text="975$"
+                android:text="@string/_975"
                 android:textColor="#26CC2C"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -184,7 +187,7 @@
                 android:backgroundTint="#1E7AED"
                 android:fontFamily="@font/inknut_antiqua_light"
                 android:padding="0sp"
-                android:text="Réserver maintenant ->"
+                android:text="@string/r_server_maintenant"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
